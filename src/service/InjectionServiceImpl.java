@@ -2,7 +2,9 @@ package service;
 
 
 import dao.InjectionDAO;
+import org.springframework.stereotype.Component;
 
+@Component
 public class InjectionServiceImpl implements InjectionService {
 	
 	private InjectionDAO injectionDAO;

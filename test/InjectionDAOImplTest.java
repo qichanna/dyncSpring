@@ -1,4 +1,5 @@
 import dao.InjectionDAO;
+import dao.InjectionDAOImpl;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -13,7 +14,7 @@ import service.InjectionServiceImpl;
 public class InjectionDAOImplTest extends UnitTestBase{
 
     public InjectionDAOImplTest() {
-        super("classpath*:spring-injection.xml");
+        super("classpath*:spring-beanannotation.xml");
     }
 
     @Test
@@ -21,7 +22,17 @@ public class InjectionDAOImplTest extends UnitTestBase{
 //        String bean=getClass().getResource("spring-injection.xml").toString();
 //        ApplicationContext ctx=new FileSystemXmlApplicationContext(bean);
 //        ApplicationContext factory=new ClassPathXmlApplicationContext("classpath:spring-ioc.xml");
-        InjectionServiceImpl i = super.getBean("injectionService");
+        InjectionDAOImpl i = super.getBean("abc");
+        i.save("ffg");
+    }
+
+
+    @Test
+    public void testannotion() throws Exception {
+//        String bean=getClass().getResource("spring-injection.xml").toString();
+//        ApplicationContext ctx=new FileSystemXmlApplicationContext(bean);
+//        ApplicationContext factory=new ClassPathXmlApplicationContext("classpath:spring-ioc.xml");
+        InjectionServiceImpl i = super.getBean("injectionServiceImpl");
         i.save("ffg");
     }
 }
