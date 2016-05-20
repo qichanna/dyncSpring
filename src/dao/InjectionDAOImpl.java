@@ -1,14 +1,9 @@
 package dao;
 
 
-import org.springframework.stereotype.Component;
-
 /**
  * Created by liqi7 on 2016/5/19.
  */
-
-
-@Component("abc")
 public class InjectionDAOImpl implements InjectionDAO {
 
     @Override
