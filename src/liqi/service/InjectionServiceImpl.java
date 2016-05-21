@@ -19,6 +19,7 @@ public class InjectionServiceImpl implements InjectionService {
 	}
 	
 	//设值注入
+	@Autowired
 	public void setInjectionDAO2(InjectionDAO injectionDAO2) {
 		this.injectionDAO = injectionDAO2;
 	}
