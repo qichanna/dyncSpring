@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd" >
 
-    <bean id="injectionService" class="service.InjectionServiceImpl">
+    <bean id="injectionService" class="liqi.service.InjectionServiceImpl">
         <constructor-arg name="injectionDAO1" ref="injectionDAO"></constructor-arg>
     </bean>
 
@@ -12,6 +12,6 @@
             <property name="injectionDAO2" ref="injectionDAO"></property>
         </bean>-->
         
-        <bean id="injectionDAO" class="dao.InjectionDAOImpl"></bean>
+        <bean id="injectionDAO" class="liqi.dao.InjectionDAOImpl"></bean>
 	
  </beans>
