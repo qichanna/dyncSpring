@@ -15,7 +15,13 @@
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/res/spring-ioc.xml</file>
+          <file>file://$MODULE_DIR$/res/spring-transation.xml</file>
+          <file>file://$MODULE_DIR$/res/spring-transation.xml</file>
+        </fileset>
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
@@ -47,5 +53,8 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="aspect" level="project" />
+    <orderEntry type="library" name="datasource" level="project" />
+    <orderEntry type="library" name="datasource (2)" level="project" />
   </component>
 </module>
