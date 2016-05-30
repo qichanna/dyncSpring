@@ -37,31 +37,31 @@ public class MyHttpSessionListener implements HttpSessionListener,HttpSessionAtt
 
     @Override
     public void attributeAdded(HttpSessionBindingEvent httpSessionBindingEvent) {
-        System.out.println("session add");
+        System.out.println("session add : " + httpSessionBindingEvent.getName());
     }
 
     @Override
     public void attributeRemoved(HttpSessionBindingEvent httpSessionBindingEvent) {
-        System.out.println("session remove");
+        System.out.println("session remove : " + httpSessionBindingEvent.getName());
     }
 
     @Override
     public void attributeReplaced(HttpSessionBindingEvent httpSessionBindingEvent) {
-        System.out.println("session replace");
+        System.out.println("session replace : " + httpSessionBindingEvent.getName());
     }
 
     @Override
     public void attributeAdded(ServletContextAttributeEvent servletContextAttributeEvent) {
-        System.out.println("context add");
+        System.out.println("context add : " + servletContextAttributeEvent.getName());
     }
 
     @Override
     public void attributeRemoved(ServletContextAttributeEvent servletContextAttributeEvent) {
-        System.out.println("context remove");
+        System.out.println("context remove : " + servletContextAttributeEvent.getName());
     }
 
     @Override
     public void attributeReplaced(ServletContextAttributeEvent servletContextAttributeEvent) {
-        System.out.println("context replace");
+        System.out.println("context replace : " + servletContextAttributeEvent.getName());
     }
 }

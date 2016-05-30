@@ -42,31 +42,31 @@ public class MyServletRequestListener implements ServletRequestListener,ServletR
 
     @Override
     public void attributeAdded(ServletRequestAttributeEvent servletRequestAttributeEvent) {
-        System.out.println("request add");
+        System.out.println("request add : " + servletRequestAttributeEvent.getName() );
     }
 
     @Override
     public void attributeRemoved(ServletRequestAttributeEvent servletRequestAttributeEvent) {
-        System.out.println("request remove");
+        System.out.println("request remove : " + servletRequestAttributeEvent.getName());
     }
 
     @Override
     public void attributeReplaced(ServletRequestAttributeEvent servletRequestAttributeEvent) {
-        System.out.println("request replace");
+        System.out.println("request replace : " + servletRequestAttributeEvent.getName());
     }
 
     @Override
     public void attributeAdded(ServletContextAttributeEvent servletContextAttributeEvent) {
-        System.out.println("context add");
+        System.out.println("context add : " + servletContextAttributeEvent.getName());
     }
 
     @Override
     public void attributeRemoved(ServletContextAttributeEvent servletContextAttributeEvent) {
-        System.out.println("context remove");
+        System.out.println("context remove : " + servletContextAttributeEvent.getName());
     }
 
     @Override
     public void attributeReplaced(ServletContextAttributeEvent servletContextAttributeEvent) {
-        System.out.println("context replace");
+        System.out.println("context replace : " + servletContextAttributeEvent.getName());
     }
 }
